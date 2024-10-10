@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const corsOptions = {
-  origin: [ "https://electronic-music-tutorial.netlify.app/"],
+  origin: [ "https://electronic-music-tutorial.netlify.app"],
   preflightContinue: true,
   optionSuccessStatus: 200,
 }
