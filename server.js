@@ -24,6 +24,9 @@ const MAX_CHARACTER_LIMIT = 5000; // Set desired character limit
 app.post('/api/chat', async (req, res) => {
   const { message, messages, name, age, experienceLevel, genre, method, tutorial } = req.body;
 //   console.log(currentModel, "currentModel")
+
+console.log(req.body);
+
 const MAX_MESSAGES = 10;
 const newMessage = { role: 'user', content: message };
 const validMessages = messages
@@ -72,23 +75,23 @@ const fullMessages = [
   }
 });
 
-app.get('/api/models', async (req, res) => {
-    try {
-        // Fetch available models 
-        const response = await openai.models.list(); 
+// app.get('/api/models', async (req, res) => {
+//     try {
+//         // Fetch available models 
+//         const response = await openai.models.list(); 
         
-        // Assuming response.data contains the models
-        // console.log(response.data);
+//         // Assuming response.data contains the models
+//         // console.log(response.data);
         
-        res.json({
-            // Ensure to return models as an array
-            models: response.data 
-        });
-    } catch (error) {
-        console.error('Error fetching models:', error);
-        res.status(500).json({ error: 'Failed to retrieve models' });
-    }
-});
+//         res.json({
+//             // Ensure to return models as an array
+//             models: response.data 
+//         });
+//     } catch (error) {
+//         console.error('Error fetching models:', error);
+//         res.status(500).json({ error: 'Failed to retrieve models' });
+//     }
+// });
 
 // Start the server
 const port = process.env.PORT || 5001;
