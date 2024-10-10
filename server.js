@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const corsOptions = {
-  origin: ["https://electronic-music-tutorial.netlify.app/", "http://localhost:5001"],
+  origin: [ "http://localhost:3000"],
   preflightContinue: true,
   optionSuccessStatus: 200,
 }
@@ -29,6 +29,8 @@ const newMessage = { role: 'user', content: message };
 const validMessages = messages
   .slice(-MAX_MESSAGES)
   .filter(mesg => mesg.role && mesg.content)
+
+console.log(newMessage);
 
 const fullMessages = [
   {
