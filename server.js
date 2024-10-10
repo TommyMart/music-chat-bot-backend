@@ -38,7 +38,7 @@ console.log(newMessage);
 const fullMessages = [
   {
     role: 'system',
-    content: `Please help ${name === '' ? 'user' : name}, get better at producing electronic ${genre} music using ${method}. Please use new lines for dot points. ${tutorial === "" ? "" : `Please teach them a tutorial on ${tutorial}.`} They have ${experienceLevel} experience level. Please communicate like you are age ${age}.`
+    content: `Please help ${name === '' ? 'user' : name}, get better at producing electronic ${genre} music using ${method}. Please use new lines for dot points. ${tutorial === "" ? "" : `Please teach them a tutorial on ${tutorial}.`} They have ${experienceLevel} experience level. Please communicate like you are age ${age}. Please make your answer less than 4000 characters and ask what they would like to learn more of or next at the end of the message.`
   },
   ...validMessages, // Previous messages
   newMessage // Add the new user message
