@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const corsOptions = {
-  origin: [ "http://localhost:3000"],
+  origin: [ "https://electronic-music-tutorial.netlify.app/"],
   preflightContinue: true,
   optionSuccessStatus: 200,
 }
